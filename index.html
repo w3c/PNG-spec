@@ -7949,10 +7949,10 @@ losslessly represents the same reference image.</li>
       <dd>apng</dd>
 
       <dt>Required parameters:</dt>
-      <dd>None</dd>
+      <dd>N/A</dd>
 
       <dt>Optional parameters:</dt>
-      <dd>None</dd>
+      <dd>N/A</dd>
 
       <dt>Encoding considerations:</dt>
       <dd>binary</dd>
@@ -7983,21 +7983,27 @@ losslessly represents the same reference image.</li>
         <p>The PNG format is specifically designed to facilitate early detection
           of file transmission errors, and makes use of cyclical redundancy
           checks to ensure the integrity of the data contained in its chunks.</p>
+        <p>If one creates an APNG file with unrelated static image and 
+          animated image chunks, somebody using a tool not supporting the 
+          APNG format would only see the static image and be unaware of
+          the additional content. This could be used e.g. to bypass 
+          moderation. </p>
       </dd>
 
       <dt>Interoperability considerations:</dt>
-      <dd>Network byte order used throughout.</dd>
+      <dd>None</dd>
 
       <dt>Published specification:</dt>
-      <dd><a href="https://www.w3.org/TR/PNG/
+      <dd><a href="https://www.w3.org/TR/png/
         ">Portable Network Graphics (PNG) Specification</a>,
-        <a href="https://www.w3.org/TR/PNG/
-        ">https://www.w3.org/TR/PNG/</a>
+        <a href="https://www.w3.org/TR/png/
+        ">https://www.w3.org/TR/png/</a>
       </dd>
 
       <dt>Applications which use this media:</dt>
-      <dd>Animated PNG (APNG) is widely implemented
-        in all Web browsers, image viewers, and animation and image creation tools
+      <dd>Animated PNG (APNG) is widely 
+        implemented in all Web browsers, and is increasingly available in 
+        image viewers, and animation and image creation tools
       </dd>
 
       <dt>Fragment identifier considerations:
@@ -8016,7 +8022,7 @@ losslessly represents the same reference image.</li>
       <dd>
         <dl>
           <dt>Deprecated alias names for this type:</dt>
-          <dd>N/A</dd>
+          <dd>image/vnd.mozilla.apng</dd>
           <dt>Magic number(s):</dt>
           <dd>89 50 4E 47 0D 0A 1A 0A</dd>
           <dt>File extension(s):</dt>
@@ -8028,8 +8034,13 @@ losslessly represents the same reference image.</li>
 
       <dt>General Comments:</dt>
       <dd>
-        <p>This registration brings the PNG specification
-          into alignment with already widely-deployed reality.
+        <p>
+          image/apng has been in widespread, unregistered use since 2015.
+          Animated PNG was not part of the official PNG specification until 2022.
+          This registration, plus the PNG specification (3rd Edition) 
+          brings official documentation into alignment with already 
+          widely-deployed reality. 
+      </p>
 
       <dt>Person to contact for further information:</dt>
       <dd>
